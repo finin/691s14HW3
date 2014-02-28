@@ -3,7 +3,7 @@
 # change this to be how you invoke cwm
 C=cwm
 
-all: myfamily.n3 family-rules.n3 rdfs-rules.n3 myfamily-facts.n3 
+all: myfamily-facts.n3 
 
 # all_rules.n3 is just the combination of our rules for rdfs, rules
 # for the gedcom relations and the addional rules for family relations
