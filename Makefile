@@ -1,13 +1,13 @@
 #  Unix Makefile for HW3 
 
 # change this to be how you invoke cwm
-C=cwm
+C=/afs/umbc.edu/users/f/i/finin/pub/cwm
 
 all: myfamily-facts.n3 
 
-# all_rules.n3 is just the combination of our rules for rdfs, rules
-# for the gedcom relations and the addional rules for family relations
-# (e.g., knows, older, etc.)
+# produce all_rules.n3 by combining our rules for rdfs,
+# gedcom-relations and the addional rules for family relations (e.g.,
+# knows, older, etc.)
 all_rules.n3 : rdfs-rules.n3 gedcom-relations.n3 family-rules.n3
 	$C  rdfs-rules.n3 gedcom-relations.n3 family-rules.n3 > all_rules.n3
 
