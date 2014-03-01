@@ -1,6 +1,6 @@
 Files for hW3
 
-To see how this hould work, do the following:
+To see how this should work, do the following:
 
   cwm rdfs-rules.n3 gedcom-relations.n3 family-rules.n3 > all_rules.n3
   cwm myfamily.n3 --apply=all_rules.n3  > myfamily-facts.n3
