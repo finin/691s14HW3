@@ -11,12 +11,28 @@
 @prefix gc: <http://www.daml.org/2001/01/gedcom/gedcom#>.
 
 gc:parent owl:inverseOf gc:child.
+{?C gc:parent ?P} => {?P gc:child ?C}.
+{?P gc:child ?C} => {?C gc:parent ?P}.
+
 gc:grandparent owl:inverseOf gc:grandchild.
+{?C gc:grandparent ?P} => {?P gc:grandchild ?C}.
+{?P gc:grandchild ?C} => {?C gc:grandparent ?P}.
+
 gc:ancestor owl:inverseOf gc:descendent.
+{?C gc:ancestor ?P} => {?P gc:descendent ?C}.
+{?P gc:descendent ?C} => {?C gc:ancestor ?P}.
+
 gc:sibling a owl:SymmetricProperty.
+{?P1 gc:sibling ?P2} => {?P2 gc:sibling ?P1}.
+
 gc:spouse a owl:SymmetricProperty.
+{?P1 gc:spouse ?P2} => {?P2 gc:spouse ?P1}.
+
 gc:ancestor a owl:TransitiveProperty.
+{?P1 gc:ancestor ?P2. ?P2 gc:ancestor ?P3} => {?P1 gc:ancestor ?P3}.
+
 gc:parent rdfs:subPropertyOf gc:ancestor.
+{?P1 gc:parent ?P2} => {?P1 gc:ancestor ?P2}.
 
 {?C gc:childIn ?F. ?P gc:spouseIn ?F} => {?C gc:parent ?P}.
 {?C gc:parent ?P. ?P gc:sex gc:Male} => {?C gc:father ?P}.

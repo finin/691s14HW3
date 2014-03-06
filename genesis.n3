@@ -25,6 +25,6 @@
   gc:spouseIn :fam1 .
 
 [a owl:AllDifferent;
- owl:distinctMembers (:Able :Cain :Adam :Eve)]
+ owl:distinctMembers (:Able :Cain :Adam :Eve)] .
 
 
