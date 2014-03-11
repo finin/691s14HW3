@@ -27,4 +27,10 @@
 [a owl:AllDifferent;
  owl:distinctMembers (:Able :Cain :Adam :Eve)] .
 
+:Able owl:differentFrom :Cain .
+:Able owl:differentFrom :Adam .
+:Able owl:differentFrom :Eve .
+:Cain owl:differentFrom :Adam .
+:Cain owl:differentFrom :Eve .
+:Adam owl:differentFrom :Eve .
 

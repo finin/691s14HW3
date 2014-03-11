@@ -69,6 +69,7 @@ rdfs:seeAlso a owl:AnnotationProperty.
 
 {?X log:notEqualTo ?Y. ?A owl:distinctMembers ?L. ?L :item ?X, ?Y} => {?X owl:differentFrom ?Y}.
 {?A  owl:disjointWith ?B. ?X a ?A. ?Y a ?B } => {?X owl:differentFrom ?Y}.
+{?S owl:differentFrom ?O.} => {?O owl:differentFrom ?S.}
 
 {?A rdfs:subPropertyOf ?B. ?B rdfs:subPropertyOf ?A} => {?A owl:equivalentProperty ?B}.
 

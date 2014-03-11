@@ -1,5 +1,4 @@
-# A simple example of family relations from genesis using the gedcom
-# vocabulary.  Replace this with your own family.
+# A simple example of family relations using the gedcom vocabulary.
 
 @prefix : <#> .
 @prefix gc: <http://www.daml.org/2001/01/gedcom/gedcom#>.
@@ -28,4 +27,10 @@
 [a owl:AllDifferent;
  owl:distinctMembers (:Able :Cain :Adam :Eve)] .
 
+:Able owl:differentFrom :Cain .
+:Able owl:differentFrom :Adam .
+:Able owl:differentFrom :Eve .
+:Cain owl:differentFrom :Adam .
+:Cain owl:differentFrom :Eve .
+:Adam owl:differentFrom :Eve .
 
